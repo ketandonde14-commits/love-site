@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Love Measurement System</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: linear-gradient(to right, #1f4037, #99f2c8);
+            color: white;
+            padding-top: 100px;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 30px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>💖 Harshu's Love Measurement System 💖</h1>
+
+<p>Enter Input Variables:</p>
+
+<input type="text" id="name1" placeholder="Your Name">
+<input type="text" id="name2" placeholder="Her Name"><br>
+
+<button onclick="calculateLove()">Start Analysis ❤️</button>
+
+<div id="result"></div>
+
+<br><br>
+<button onclick="showMessage()">Open Final Result ❤️</button>
+
+<script>
+function calculateLove() {
+    var name1 = document.getElementById("name1").value;
+    var name2 = document.getElementById("name2").value;
+
+    if(name1 == "" || name2 == "") {
+        alert("Please enter both names!");
+        return;
+    }
+
+    var loveScore = Math.floor(Math.random() * 21) + 80;
+
+   document.getElementById("result").innerHTML = "🔍 Analyzing signals...";
+
+setTimeout(function() {
+    document.getElementById("result").innerHTML =
+    "❤️ Love Level: " + loveScore + "%<br>" +
+    "📊 Stability: PERFECT<br>" +
+    "💡 Status: System Fully Controlled<br><br>" +
+    "Conclusion: Without you, my system becomes unstable ❤️";
+}, 2000);
+}
+function showMessage() {
+    document.getElementById("result").innerHTML =
+    "💌 Final Message:<br><br>" +
+    "No matter what happens…<br>" +
+    "You are the most important part of my life ❤️<br><br>" +
+    "Without you… everything feels incomplete.";
+}
+</script>
+
+</body>
+</html>
